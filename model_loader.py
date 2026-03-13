@@ -33,13 +33,13 @@ import gdown
 # ════════════════════════════════════════════════════════════════════
 
 # Pipeline 1 (existing — from minor project)
-SEG_MODEL_ID  = "1jHuqYKhHcQIdy-8dji51Mz2QyOh7Iq3R"   # resnet_segmentation_model.pth
-QNT_P1_ID     = "1l9FQMMEuPg0TSQzflfCWCzmHNyP2Brgs"   # quantum_classifier_fixed.pth
+SEG_MODEL_ID  = "1HpB4nFxV2d3_HEgwLavIsce5FgHi9KM2"   # resnet_segmentation_model.pth
+QNT_P1_ID     = "1XxSJlDFhu6PGwEueSr-2IbuGbRUkhRTb"   # quantum_classifier_fixed.pth
 
 # Pipeline 2 — REPLACE these after uploading to Drive
-VQC2_MODEL_ID   = "YOUR_VQC2_DRIVE_ID"     # models/vqc2_final.pth
-SCALER_MIN_ID   = "YOUR_SCALER_MIN_ID"     # models/scaler_min.npy
-SCALER_SCALE_ID = "YOUR_SCALER_SCALE_ID"   # models/scaler_scale.npy
+VQC2_MODEL_ID   = "1kG9r8DyxQ4SJfZNYV4uxFy-IE0-P5j_A"     # models/vqc2_final.pth
+SCALER_MIN_ID   = "1nbo3IlHdAOEqmRZEXc352o4R3qXm5qal"     # models/scaler_min.npy
+SCALER_SCALE_ID = "1_OVty73pfFOdRT4N-mWm-sKz_AdC2g-1"   # models/scaler_scale.npy
 
 
 # ════════════════════════════════════════════════════════════════════
