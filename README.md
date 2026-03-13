@@ -16,3 +16,5 @@ or project, you must cite:
 GNU GPL-3.0 — See LICENSE file.
 You may not use this work for commercial purposes without 
 explicit written permission from the author.
+
+# DOI : https://doi.org/10.5281/zenodo.19007980
