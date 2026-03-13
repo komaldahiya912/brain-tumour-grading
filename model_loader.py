@@ -1,3 +1,8 @@
+# Copyright (c) 2026 Komal Dahiya
+# GitHub: https://github.com/komaldahiya912/brain-tumour-grading
+# Licensed under CC BY-NC 4.0 — Non-commercial use only.
+# Credit must be given if this code is used or adapted.
+
 """
 model_loader.py — Brain Tumour Grading App
 
