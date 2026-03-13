@@ -562,7 +562,9 @@ def main():
     )
     st.sidebar.markdown("---")
     st.sidebar.warning("⚠ Research system — not for clinical use.")
-
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("© 2026 Komal Dahiya  \nB.Tech AIDS Final Year Project")
+    
     if   page == "🧠 Mode 1 — MRI Analysis":     page_mode1(db)
     elif page == "🧬 Mode 2 — Clinical Features": page_mode2(db)
     elif page == "📋 Prediction History":          page_history(db)
