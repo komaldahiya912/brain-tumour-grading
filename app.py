@@ -166,10 +166,7 @@ def pdf_clinical(patient, features, result):
     S.append(Paragraph("<b>Model</b>", ss["Heading2"]))
     S.append(Paragraph("VQC-2  |  5 qubits  |  2 layers  |  RyRz+CZ / Ry+CNOT", ss["Normal"]))
     S.append(Paragraph("Accuracy: 84.81%  |  Recall: 93.67%  (862 TCGA patients, 5-fold CV)", ss["Normal"]))
-    S.append(Paragraph(
-        "Akpinar & Oduncuoglu (2025), Nature Scientific Reports, DOI: 10.1038/s41598-025-97067-3",
-        ss["Normal"]
-    ))
+
     S.append(Spacer(1,12))
     S.append(Paragraph(
         "<i>⚠ Research system only — not for clinical diagnosis.</i>", ss["Normal"]
@@ -281,11 +278,7 @@ def page_mode2(db):
         "VQC-2 Quantum Classifier · 5 qubits · "
         "84.81% accuracy · 93.67% recall · 862 TCGA patients"
     )
-    st.markdown(
-        "> Replicates **Akpinar & Oduncuoglu (2025)**, *Nature Scientific Reports*, "
-        "DOI: 10.1038/s41598-025-97067-3. "
-        "Our VQC-2 exceeds the paper's result by **+10.81 pp** (84.81% vs 74%)."
-    )
+ 
     st.info(
         "Enter genomic mutation status from biopsy or TCGA report. "
         "Classifies **LGG** (Low Grade Glioma) vs **GBM** (Glioblastoma Multiforme)."
@@ -520,9 +513,6 @@ Dual-pipeline AI combining deep learning and quantum machine learning.
 | Dataset | 862 TCGA patients (499 LGG, 363 GBM) · 5-fold CV |
 | Features | IDH1, Age, PTEN, EGFR, ATRX |
 | Task | LGG vs GBM |
-| Paper | Akpinar & Oduncuoglu (2025), *Nature Sci. Reports* |
-| DOI | 10.1038/s41598-025-97067-3 |
-| Paper result | 74% — our VQC-2 exceeds by **+10.81 pp** |
 
 ---
 
