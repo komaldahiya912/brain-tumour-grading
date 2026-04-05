@@ -320,13 +320,21 @@ def page_mode2(db):
         st.warning("Enter patient name to proceed.")
         return
 
+    st.markdown("---")
+    threshold = st.slider(
+        "🎚 GBM Detection Sensitivity (lower = fewer missed cancers, more false alarms)",
+        min_value=0.05, max_value=0.50, value=0.30, step=0.05,
+        help="Default 0.30 recommended for clinical use. Lower values reduce missed GBM but increase false positives."
+    )
+    st.caption(f"At threshold {threshold:.2f} — model flags GBM if GBM probability > {threshold*100:.0f}%")
+
     if not st.button("⚛ Classify Tumour", type="primary", use_container_width=True):
         return
 
     with st.spinner("Running quantum classification …"):
         try:
             predictor = load_p2()
-            result    = predictor.predict(idh1, age, pten, egfr, atrx)
+            result    = predictor.predict(idh1, age, pten, egfr, atrx, threshold)
         except Exception as e:
             st.error(f"Classification failed: {e}")
             st.exception(e)
