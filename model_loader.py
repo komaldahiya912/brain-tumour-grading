@@ -359,7 +359,7 @@ class VQC2Predictor:
 
     def predict(self, idh1: int, age: float,
               pten: int, egfr: int, atrx: int,
-              threshold: float = 0.5) -> dict:
+              threshold: float = 0.30) -> dict:
 
         """
         Parameters
