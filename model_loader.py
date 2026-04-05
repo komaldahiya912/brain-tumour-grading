@@ -358,7 +358,9 @@ class VQC2Predictor:
         print(f"[P2] VQC-2 loaded — acc: {ckpt.get('mean_metrics',{}).get('acc','N/A')}")
 
     def predict(self, idh1: int, age: float,
-                pten: int, egfr: int, atrx: int) -> dict:
+              pten: int, egfr: int, atrx: int,
+              threshold: float = 0.5) -> dict:
+
         """
         Parameters
         ----------
@@ -392,7 +394,7 @@ class VQC2Predictor:
         # Step 4 — sigmoid → class probabilities
         gbm_prob = 1.0 / (1.0 + math.exp(-raw_out))
         lgg_prob = 1.0 - gbm_prob
-        pred_cls  = "GBM" if gbm_prob > 0.5 else "LGG"
+        pred_cls  = "GBM" if gbm_prob > threshold else "LGG"
         confidence = gbm_prob if pred_cls == "GBM" else lgg_prob
 
         return {
